@@ -109,11 +109,26 @@ console.log(checkLengthArr([2, 3, 4]))
 
 /* 10. Create a function to test if an array of lenght 2 DOES NOT contain 1 or 3. 
     Return `true` if it doesn't, `false` if it does. */ 
-
+    function checkLengthArrNot(arrayLength) {
+        let arr = arrayLength.length
+    
+        if(arr !== 1 || arr !== 2 || arr !== 3) {
+            return true
+        } else {
+            return false
+        }
+    }
+    console.log(checkLengthArrNot([2, 3, 4]))
 
 /* 11. Create a function to find the longest string from a given array of strings. 
     Pass the array as parameter and return the longest string. */ 
-
+function longestString(arrString) {
+    arrString.sort((a, b) => {
+        return b.length - a.length
+    })
+    console.log(arrString[0])
+}
+console.log(longestString(['lorem', 'ipsum', 'helloWorld']))
 
 /* 12. Create a function to find the types of a given angle:
   1. Acute angle ⇒ between 0 and 90 degrees. Return `acute`.
@@ -123,11 +138,24 @@ console.log(checkLengthArr([2, 3, 4]))
 
     Pass the angle as a parameter.
 */
-
+function findAngle (angleDegree) {
+    if(angleDegree > 0 && angleDegree <= 90) {
+        return 'acute'
+    } else if(angleDegree === 90) {
+        return 'right'
+    } else if (angleDegree === 180) {
+        return 'straight'
+    }
+}
 
 /* 13. Create a function to find and return the index of the greatest element of a given array of integers that you passed as a parameter. */
-
-
+function maxNumArr(numArr) {
+    numArr.sort((a, b) => {
+        return b - a
+    })
+    return numArr[0]
+}
+console.log(maxNumArr([24, 15, 10, 50]))
 /* 14. Create a function to find and return the largest **even** number from an array of integers that is passed a parameter. */
 
 
