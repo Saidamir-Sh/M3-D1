@@ -156,9 +156,27 @@ function maxNumArr(numArr) {
     return numArr[0]
 }
 console.log(maxNumArr([24, 15, 10, 50]))
+
 /* 14. Create a function to find and return the largest **even** number from an array of integers that is passed a parameter. */
+function findMaxEven(oddEvenArr) {
+    let even = []
+    let odd = []
 
+    for(let i = 0; i < oddEvenArr.length; i++) {
+        if(oddEvenArr[i] % 2 === 0) {
+             even.push(oddEvenArr[i])
+        } else {
+             odd.push(oddEvenArr[i])
+        }
+    }
+    
 
+    even.sort((a, b) => {
+        return b - a
+    }) 
+    return even
+}
+console.log(findMaxEven[100, 99, 80, 50])
 /* 15. Create a function to check from two given integers (passed as parameters) if one is positive and the other is negative. 
     Return `true` if that's the case, return `false` if it's not. */
 
