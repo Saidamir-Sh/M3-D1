@@ -71,14 +71,40 @@ composeString(5, 'School')
 
 /* 7. Create a function to display the city name if the string begins with "Los" or "New". 
     Pass the city name as a parameter. Return `false` if they start with a different string. */
+function checkCity(cityName) {
+    let checkLos = cityName.startsWith('Los')
+    let checkNew = cityName.startsWith('New')
 
+    if(checkLos || checkNew) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(checkCity('New York'))
 
 /* 8. Create a function to calculate and return the sum of all elements from an array with 3 elements. 
     Pass the array as a parameter. */
+function sumArr(givenArr) {
+    console.log(
+        givenArr.reduce((a, b) => a + b, 0)
+      )
+}
+console.log(sumArr([2, 3, 4]))
 
 
 /* 9. Create a function to test if an array of lenght 2 contains 1 OR 3. 
     Return `true` is it does, `false` if it doesn't. */
+function checkLengthArr(arrayLength) {
+    let arr = arrayLength.length
+
+    if(arr === 1 || arr === 2 || arr === 3) {
+        return true
+    } else {
+        return false
+    }
+}
+console.log(checkLengthArr([2, 3, 4]))
 
 
 /* 10. Create a function to test if an array of lenght 2 DOES NOT contain 1 or 3. 
